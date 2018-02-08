@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script>
+	
+	enrollForm('2');
+	
+	function enrollForm(frmId){
+		
+		'use strict'; 
+		
+		let uagent = navigator.userAgent.toLowerCase();
+		let popWin = 0;
+		
+		console.log(window.location.pathname);
+		console.log(uagent);
+		console.log('popWin: '+popWin);
+		
+		var popWin = ((uagent.search("iphone") > -1)||(uagent.search("android") > -1)||(uagent.search("iemobile") > -1)||(uagent.search("ipad") > -1))?1:popWin;
+		
+		if(popWin > 0){
+			console.log('is device:'+ popWin);
+			window.open("https://aim.bbbs.org/einquiry/einquiryzip.aspx?t="+frmId);
+		}
+		
+   }
+
+</script>
+</body>
+</html>
